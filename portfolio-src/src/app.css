@@ -1,0 +1,12 @@
+:root{
+  --doc-background-color: #FEFBF6;
+  --doc-secondary-background-color: #A6D1E6;
+  --doc-accent-color: #7F5283;
+  --doc-font-color: #3D3C42;
+}
+
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
