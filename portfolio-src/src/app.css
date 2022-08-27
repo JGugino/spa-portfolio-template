@@ -1,12 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
 :root{
   --doc-background-color: #FEFBF6;
   --doc-secondary-background-color: #A6D1E6;
   --doc-accent-color: #7F5283;
   --doc-font-color: #3D3C42;
+  --doc-font-family: 'Mukta', sans-serif;
 }
 
 *, *::before, *::after{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--doc-font-family);
+}
+
+body{
+  background-color: var(--doc-background-color);
+}
+
+.flex{
+  display: flex;
+}
+
+.flex-col{
+  flex-direction: column;
+}
+
+.flex-center{
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-gap-one{
+  gap: 1rem;
+}
+
+.flex-gap-one-half{
+  gap: 1.5rem;
+}
+
+.flex-gap-two{
+  gap: 2rem;
 }
