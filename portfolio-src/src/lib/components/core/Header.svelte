@@ -27,33 +27,18 @@
         //#region START HEADER STYLING
 
         //## HEADER CONTAINER STYLING ##
-        header.style.backgroundColor = styles.headerBGColor;
-        header.style.borderRadius = styles.headerBorderRadius;
-        header.style.margin = styles.headerMargin;
-        header.style.padding = styles.headerPadding;
+        Object.assign(header.style, styles.headerContainer);
         
         //## HEADER TEXT STYLING ##
-        foundHeaderText.style.color = styles.headerTextColor;
-        foundHeaderText.style.fontSize = styles.headerMobileTextSize;
-        foundHeaderText.style.textAlign = styles.headerTextAlignment;
+        Object.assign(foundHeaderText.style, styles.headerText.default);
 
         //## HEADER LINKS STYLING ##
         foundHeaderLinks.forEach((link)=>{
-            link.style.color = styles.headerLinkNormalColor;
-            link.style.textDecoration = styles.headerLinkTextDecoration;
-            link.style.fontSize = styles.headerLinkMobileTextSize;
-            link.style.transition = styles.headerLinkTransition;
+            Object.assign(link.style, styles.headerLinks.default);
 
-            link.addEventListener('mouseover', ()=>{
-                link.style.color = styles.headerLinkHoverColor;
-            });
+            link.addEventListener('mouseover', ()=>{ Object.assign(link.style, styles.headerLinks.hover); });
 
-            link.addEventListener('mouseleave', ()=>{
-                link.style.color = styles.headerLinkNormalColor;
-            });
-
-            //#### REMOVE THIS TO BE ABLE TO HIGHLIGHT HEADER LINKS ####
-            link.style.userSelect = 'none';
+            link.addEventListener('mouseleave', ()=>{ Object.assign(link.style, styles.headerLinks.normal); });
         });
         //#endregion
     }
@@ -71,10 +56,3 @@
         {/each}
     </nav>
 </header>
-
-<style>
-    .header-text{
-        user-select: none;
-        cursor: default;
-    }
-</style>

@@ -22,34 +22,15 @@
         //#region START FOOTER STYLING
 
         //## FOOTER CONTAINER STYLING ##
-        footer.style.backgroundColor = styles.footerBGColor;
-        footer.style.borderRadius = styles.footerBorderRadius;
-        footer.style.width = styles.footerWidth;
-        footer.style.maxWidth = styles.footerMaxWidth;
-        footer.style.margin = styles.footerMargin;
-        footer.style.padding = styles.footerPadding;
+        Object.assign(footer.style, styles.footerContainer);
         
         //## FOOTER TEXT STYLING ##
-        foundFooterText.style.color = styles.footerTextColor;
-        foundFooterText.style.fontSize = styles.footerMobileTextSize;
-        foundFooterText.style.textAlign = styles.footerTextAlignment;
+        Object.assign(foundFooterText.style, styles.footerText.default);
 
-        //#### REMOVE THIS TO BE ABLE TO HIGHLIGHT FOOTER TEXT ####
-        foundFooterText.style.userSelect = 'none';
-
-        //## FOTTER SOCIALS STYLING ##
-        foundFooterLinks.forEach((link)=>{
-            link.firstChild.style.width = styles.footerIconMobileSize;
-            link.firstChild.style.height = styles.footerIconMobileSize;
-
-            //#### REMOVE THIS TO BE ABLE TO HIGHLIGHT SOCIAL LINKS ####
-            link.style.userSelect = 'none';
-        });
+        //## FOOTER SOCIALS STYLING ##
+        foundFooterLinks.forEach((link)=>{ Object.assign(link.firstChild.style, styles.footerLinks.default); });
+        
         //#endregion
-    }
-
-    function openSocial(socialLink){
-        window.open(socialLink, '_blank');
     }
 
     function determineSocialIcon(icon){
@@ -93,6 +74,3 @@
         {/each}
     </nav>
 </footer>
-
-<style>
-</style>

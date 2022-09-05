@@ -8,17 +8,35 @@ export const footerOptions = {
         {socialIcon: 'in', socialLink: 'https://www.linkedin.com'},
     ],
     footerStyles: {
-        footerBGColor: 'var(--doc-font-color)',
-        footerBorderRadius: '10px',
-        footerWidth: '90%',
-        footerMaxWidth: '400px',
-        footerMargin: '0.4rem auto',
-        footerPadding: '0.8em 0',
-        footerTextColor: 'var(--doc-background-color)',
-        footerMobileTextSize: '11pt',
-        footerDesktopTextSize: '14pt',
-        footerTextAlignment: 'center',
-        footerIconMobileSize: '38px',
-        footerIconDesktopSize: '40px',
+        footerContainer:{
+            backgroundColor: 'var(--doc-font-color)',
+            borderRadius: '10px',
+            width: '90%',
+            maxWidth: '400px',
+            margin: '0.4rem auto',
+            padding: '0.8em 0',
+            color: 'var(--doc-background-color)',
+        },
+        footerText:{
+            default: {
+                fontSize: '11pt',
+                textAlign: 'center',
+                userSelect: 'none'
+            },
+            desktop: {
+                fontSize: '14pt'
+            }
+        },
+        footerLinks:{
+            default: {
+                width: '38px',
+                height: '38px',
+                userSelect: 'none'
+            },
+            desktop: {
+                width: '40px',
+                height: '40px',
+            }
+        },
     }
 }

@@ -7,19 +7,41 @@ export const headerOptions = {
         {linkHref: '#contact', linkName: 'Contact'}
     ],
     headerStyles: {
-        headerBGColor: 'var(--doc-secondary-background-color)',
-        headerBorderRadius: '0 0 10px 10px',
-        headerMargin: '0',
-        headerPadding: '0.5rem 0 0.8rem 0',
-        headerTextColor: 'var(--doc-font-color)',
-        headerMobileTextSize: '64pt',
-        headerDesktopTextSize: '68pt',
-        headerTextAlignment: 'center',
-        headerLinkNormalColor: 'var(--doc-font-color)',
-        headerLinkHoverColor: 'var(--doc-accent-color)',
-        headerLinkTextDecoration: 'none',
-        headerLinkTransition: 'color ease-in-out 200ms',
-        headerLinkMobileTextSize: '14pt',
-        headerLinkDesktopTextSize: '16pt',
+        headerContainer: {
+            backgroundColor: 'var(--doc-secondary-background-color)',
+            borderRadius: '0 0 10px 10px',
+            margin: '0',
+            padding: '0.5rem 0 0.8rem 0'
+        },
+        headerText: {
+            default:{
+                color: 'var(--doc-font-color)',
+                fontSize: '64pt',
+                textAlign: 'center',
+                userSelect: 'none',
+                fontWeight: 'bold'
+            },
+            desktop:{
+                fontSize: '68pt'
+            }
+        },
+        headerLinks: {
+            default:{
+                fontSize: '14pt',     
+                textDecoration: 'none',
+                transition: 'color ease-in-out 200ms',
+                color: 'var(--doc-font-color)',
+                userSelect: 'none'
+            },
+            desktop:{
+                fontSize: '16pt'
+            },
+            normal:{
+                color: 'var(--doc-font-color)'
+            },
+            hover: {
+                color: 'var(--doc-accent-color)',
+            }
+        },
     }
 }
