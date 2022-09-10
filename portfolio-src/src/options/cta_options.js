@@ -8,7 +8,7 @@ export const ctaOptions = {
         ctaContainer: {
             userSelect: 'none',
             margin: '0',
-            padding: '2em 0',
+            padding: '4em 0',
         },
         ctaTexts: {
             primaryText: {
@@ -16,7 +16,7 @@ export const ctaOptions = {
                 textAlign: 'center',
                 color: 'var(--doc-font-color)',
                 fontWeight: '600',
-                textShadow: '0px 12px 14px rgba(0,0,0,60%)'
+                textShadow: '0px 12px 14px rgba(0,0,0,40%)'
             },
             subtext: {
                 fontSize: '20pt',
@@ -24,7 +24,7 @@ export const ctaOptions = {
                 color: 'var(--doc-font-color)',
                 userSelect: 'none',
                 fontWeight: '400',
-                textShadow: '0px 10px 8px rgba(0,0,0,60%)'
+                textShadow: '0px 10px 8px rgba(0,0,0,40%)'
             },
             mottoText: {
                 fontSize: '14pt',
