@@ -1,5 +1,5 @@
 export const projectsOptions = {
-    panelID: 'projects-panel',
+    panelID: 'projects',
     panelHeaderText: 'PROJECTS',
     panelStyles: {
         panelContainer: {

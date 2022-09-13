@@ -5,7 +5,7 @@
     export let panelHeaderText = 'Example';
     export let panelStyles;
 
-    const containerSuffix = '-plain-panel';
+    const containerSuffix = '-panel';
     const headerTextSuffix = '-plain-header-text';
 
     onMount(()=>{

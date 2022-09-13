@@ -1,5 +1,5 @@
 export const skillsOptions = {
-    panelID: 'skills-panel',
+    panelID: 'skills',
     panelHeaderText: 'SKILLS',
     panelStyles: {
         panelContainer: {
@@ -22,7 +22,6 @@ export const skillsOptions = {
             height: '0',
             top: '-48px',
             left: '0',
-            borderRadius: '10px 0 10px 0',
             borderBottom: '60px solid var(--doc-secondary-background-color)',
             borderRight: '60px solid transparent',
         },
@@ -32,7 +31,6 @@ export const skillsOptions = {
             height: '0',
             bottom: '-48px',
             right: '0',
-            borderRadius: '10px 0 10px 0',
             borderTop: '60px solid var(--doc-secondary-background-color)',
             borderLeft: '60px solid transparent',
             zIndex: '1'

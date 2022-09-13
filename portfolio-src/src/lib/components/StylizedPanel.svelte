@@ -5,7 +5,7 @@
     export let panelHeaderText = 'Example';
     export let panelStyles;
 
-    const containerSuffix = '-stylized-panel';
+    const containerSuffix = '-panel';
     const headerTextSuffix = '-stylized-header-text';
     const topExtraSuffix = '-stylized-top-extra';
     const bottomExtraSuffix = '-stylized-bottom-extra';
