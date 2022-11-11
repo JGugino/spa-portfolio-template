@@ -3,12 +3,13 @@
     import StylizedPanel from "../StylizedPanel.svelte";
     import PlainPanel from "../PlainPanel.svelte";
 
+    import SkillsSection from "../plugins/SkillsSection.svelte";
     import AboutSection from "../plugins/AboutSection.svelte";
     import ContactForm from "../plugins/ContactForm.svelte";
 
     import { ctaOptions } from "../../../options/cta_options";
-    import { skillsOptions } from "../../../options/panel_options/skills_options";
-    import { aboutOptions } from "../../../options/panel_options/about_options";
+    import { skillsOptions, skillsSection } from "../../../options/panel_options/skills_options";
+    import { aboutOptions, aboutSection } from "../../../options/panel_options/about_options";
     import { projectsOptions } from "../../../options/panel_options/projects_options";
     import { contactOptions, formStyles } from "../../../options/panel_options/contact_options";
 </script>
@@ -20,7 +21,7 @@
     <!-- ### SKILLS PANEL ### -->
     <StylizedPanel {...skillsOptions}>
         <div slot="stylized-panel-slot">
-            <h4>Skills here *smile*</h4>
+            <SkillsSection {...skillsSection}/>
         </div>
     </StylizedPanel>
 
@@ -34,8 +35,7 @@
     <!-- ### ABOUT PANEL ### -->
     <StylizedPanel {...aboutOptions}>
         <div slot="stylized-panel-slot">
-            <!--TODO: Finish styling-->
-            <AboutSection {...aboutOptions.aboutSection}/>
+            <AboutSection {...aboutSection}/>
         </div>
     </StylizedPanel>
 
