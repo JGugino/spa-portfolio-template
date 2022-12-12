@@ -24,6 +24,7 @@ export const aboutOptions = {
             left: '0',
             borderBottom: '60px solid var(--doc-secondary-background-color)',
             borderRight: '60px solid transparent',
+            zIndex: '3'
         },
         panelBottomExtra: {
             position: 'absolute',

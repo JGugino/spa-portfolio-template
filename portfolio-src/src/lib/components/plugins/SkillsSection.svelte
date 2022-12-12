@@ -51,7 +51,7 @@
     }
 </script>
 
-<div class="skills-section">
+<section class="skills-section">
     <div class="current-skills">
         {#each currentSkills as skill}
             <div class={`skill-${formatSkillName(skill.name)}`}>
@@ -61,7 +61,7 @@
         {/each}
     </div>
     <div class='bottom-extra-skills'></div>
-</div>
+</section>
 
 <!--REMOVE EVERYTHING TO REMOVE SCROLLBAR STYLES FROM THIS COMPONENT-->
 <style>

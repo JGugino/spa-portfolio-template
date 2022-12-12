@@ -4,13 +4,14 @@
     import PlainPanel from "../PlainPanel.svelte";
 
     import SkillsSection from "../plugins/SkillsSection.svelte";
+    import ProjectsSection from "../plugins/ProjectsSection.svelte";
     import AboutSection from "../plugins/AboutSection.svelte";
     import ContactForm from "../plugins/ContactForm.svelte";
 
     import { ctaOptions } from "../../../options/cta_options";
     import { skillsOptions, skillsSection } from "../../../options/panel_options/skills_options";
     import { aboutOptions, aboutSection } from "../../../options/panel_options/about_options";
-    import { projectsOptions } from "../../../options/panel_options/projects_options";
+    import { projectsOptions, projectsSection } from "../../../options/panel_options/projects_options";
     import { contactOptions, formStyles } from "../../../options/panel_options/contact_options";
 </script>
 
@@ -28,7 +29,7 @@
     <!-- ### PROJECTS PANEL ### -->
     <PlainPanel {...projectsOptions}>
         <div slot="plain-panel-slot">
-            <h4>Projects here *smile*</h4>
+            <ProjectsSection {...projectsSection}/>
         </div>
     </PlainPanel>
 
