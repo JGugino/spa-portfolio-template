@@ -1,13 +1,20 @@
+//### OUTTER PANEL SETTINGS ###
 export const projectsOptions = {
+    //panel id used for locating elements for styling
     panelID: 'projects',
+    //The text that appears at the top of the panel
     panelHeaderText: 'PROJECTS',
+
+    //### OUTTER PANEL STYLES ###
     panelStyles: {
+        //Primary outter container styles
         panelContainer: {
             backgroundColor: 'var(--doc-background-color)',
             borderRadius: '10px',
             minHeight: '260px',
             position: 'relative'
         },
+        //Header text styles
         panelHeaderText: {
             textAlign: 'center',
             fontSize: '32pt',
@@ -18,7 +25,14 @@ export const projectsOptions = {
     }
 }
 
+//### INNER SECTION OPTIONS ###
 export const projectsSection = {
+    currentProjects: [
+        {name: 'nonChat', icon: './project_images/nonchat_cover.png', coverAlt: 'nonChat Cover', link: 'https://nonchat.me'},
+        {name: 'Nicular', icon: './project_images/nicular_cover.png', coverAlt: 'nonChat Cover', link: 'https://nonchat.me'},
+        {name: 'PhotoWords', icon: './project_images/photowords_cover.png', coverAlt: 'nonChat Cover', link: 'https://nonchat.me'},
+        {name: 'Todo List', icon: './project_images/todos_list_cover.png', coverAlt: 'nonChat Cover', link: 'https://nonchat.me'}
+    ],
     projectsStyles: {
         projectsContainer: {
             position: 'relative',
@@ -58,11 +72,5 @@ export const projectsSection = {
             fontWeight: '600',
             color: 'var(--doc-font-color)',
         }
-    },
-    currentProjects: [
-        {name: 'nonChat', icon: './project_images/nonchat_cover.png', coverAlt: 'nonChat Cover', link: 'https://nonchat.me'},
-        {name: 'Nicular', icon: './project_images/nicular_cover.png', coverAlt: 'nonChat Cover', link: 'https://nonchat.me'},
-        {name: 'PhotoWords', icon: './project_images/photowords_cover.png', coverAlt: 'nonChat Cover', link: 'https://nonchat.me'},
-        {name: 'Todo List', icon: './project_images/todos_list_cover.png', coverAlt: 'nonChat Cover', link: 'https://nonchat.me'}
-    ]
+    }
 }
