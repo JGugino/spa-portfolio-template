@@ -1,18 +1,24 @@
 export const headerOptions = {
+    //Main header text
     headerText: 'The Doe',
+    //Links that display below the header text (linkHref = section to scroll to when clicked, linkName = name displayed on page)
     headerLinks: [
         {linkHref: '#skills', linkName: 'Skills'},
         {linkHref: '#projects', linkName: 'Projects'},
         {linkHref: '#about', linkName: 'About'},
         {linkHref: '#contact', linkName: 'Contact'}
     ],
+
+    //### HEADER STYLES ###
     headerStyles: {
+        //Header primary container styles
         headerContainer: {
             backgroundColor: 'var(--doc-secondary-background-color)',
             borderRadius: '0 0 10px 10px',
             margin: '0',
             padding: '0.5rem 0 0.8rem 0'
         },
+        //Header primary text styles (default = Mobile/Tablet Viewing, desktop = Desktop Viewing)
         headerText: {
             default:{
                 color: 'var(--doc-font-color)',
@@ -25,6 +31,7 @@ export const headerOptions = {
                 fontSize: '68pt'
             }
         },
+        //Header link styles (default = Mobile/Tablet Viewing, desktop = Desktop Viewing, normal = when not hovering link, hover = when hovering link)
         headerLinks: {
             default:{
                 fontSize: '14pt',     

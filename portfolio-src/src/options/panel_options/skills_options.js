@@ -69,7 +69,7 @@ export const skillsSection = {
         },
         skillItemIcon: {
             width: '68px',
-            width: '68px',
+            height: '68px',
             padding: '0.6rem',
             borderRadius: '10px',
             background: 'var(--doc-font-color)',

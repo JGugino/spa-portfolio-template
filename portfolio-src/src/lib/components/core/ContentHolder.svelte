@@ -1,13 +1,16 @@
 <script>
-    import CtaPanel from "../CTAPanel.svelte";
-    import StylizedPanel from "../StylizedPanel.svelte";
-    import PlainPanel from "../PlainPanel.svelte";
+    //Imports for core panels
+    import CtaPanel from "../panels/CTAPanel.svelte";
+    import StylizedPanel from "../panels/StylizedPanel.svelte";
+    import PlainPanel from "../panels/PlainPanel.svelte";
 
+    //Imports for panel inner sections
     import SkillsSection from "../plugins/SkillsSection.svelte";
     import ProjectsSection from "../plugins/ProjectsSection.svelte";
     import AboutSection from "../plugins/AboutSection.svelte";
     import ContactForm from "../plugins/ContactForm.svelte";
 
+    //Option files for core panels and inner sections
     import { ctaOptions } from "../../../options/cta_options";
     import { skillsOptions, skillsSection } from "../../../options/panel_options/skills_options";
     import { aboutOptions, aboutSection } from "../../../options/panel_options/about_options";
@@ -49,5 +52,4 @@
 </section>
 
 <style>
-
 </style>

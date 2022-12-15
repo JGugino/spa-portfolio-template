@@ -19,7 +19,9 @@
         applyContactStyles(contactStyles);
     });
 
+    //### APPLY SPECIFIED STYLES TO PROPER FORM ELEMENTS
     function applyContactStyles(styles){
+        //### FIND FORM ELEMENTS ###
         const contactForm = document.querySelector('.contact-form');
         const nameInput = document.querySelector('.contact-name-input');
         const emailInput = document.querySelector('.contact-email-input');
@@ -27,39 +29,40 @@
         const submitButton = document.querySelector('.contact-submit-button');
         const errorMessage = document.querySelector('.form-error');
 
+        //### MAKE SURE STYLES EXIST AND APPLY TO CORRECT ELEMENT ###
         if(styles.formContainer) Object.assign(contactForm.style, styles.formContainer);
         else console.error('No formContainer styles found');
 
         if(styles.formInputs) Object.assign(nameInput.style, styles.formInputs.default);
         else console.error('No formInputs styles found');
 
-        nameInput.addEventListener('focus', ()=>{Object.assign(nameInput.style, styles.formInputs.focus)});
-        nameInput.addEventListener('focusout', ()=>{Object.assign(nameInput.style, styles.formInputs.default)});
-
         if(styles.formInputs) Object.assign(emailInput.style, styles.formInputs.default);
         else console.error('No formInputs styles found');
-
-        emailInput.addEventListener('focus', ()=>{Object.assign(emailInput.style, styles.formInputs.focus)});
-        emailInput.addEventListener('focusout', ()=>{Object.assign(emailInput.style, styles.formInputs.default)});
 
         if(styles.formMessage) Object.assign(messageInput.style, styles.formMessage.default);
         else console.error('No formMessage styles found');
 
-        messageInput.addEventListener('focus', ()=>{Object.assign(messageInput.style, styles.formMessage.focus)});
-        messageInput.addEventListener('focusout', ()=>{Object.assign(messageInput.style, styles.formMessage.default)});
-
         if(styles.formButton) Object.assign(submitButton.style, styles.formButton.default);
         else console.error('No formButton styles found');
-
-        submitButton.addEventListener('mouseover', ()=>{Object.assign(submitButton.style, styles.formButton.hover)});
-
-        submitButton.addEventListener('mouseleave', ()=>{Object.assign(submitButton.style, styles.formButton.default)});
 
         if(styles.formError) Object.assign(errorMessage.style, styles.formError);
         else console.error('No formError styles found');
 
+        //### APPLY HOVER STYLES FOR INPUTS & BUTTON ###
+        nameInput.addEventListener('focus', ()=>{Object.assign(nameInput.style, styles.formInputs.focus)});
+        nameInput.addEventListener('focusout', ()=>{Object.assign(nameInput.style, styles.formInputs.default)});
+
+        emailInput.addEventListener('focus', ()=>{Object.assign(emailInput.style, styles.formInputs.focus)});
+        emailInput.addEventListener('focusout', ()=>{Object.assign(emailInput.style, styles.formInputs.default)});
+
+        messageInput.addEventListener('focus', ()=>{Object.assign(messageInput.style, styles.formMessage.focus)});
+        messageInput.addEventListener('focusout', ()=>{Object.assign(messageInput.style, styles.formMessage.default)});
+
+        submitButton.addEventListener('mouseover', ()=>{Object.assign(submitButton.style, styles.formButton.hover)});
+        submitButton.addEventListener('mouseleave', ()=>{Object.assign(submitButton.style, styles.formButton.default)});
     }
 
+    //### VALIDATE AND SUBMIT FORM INFORMATION AND HANDLE IT IN App.svelte ###
     function submitContactForm(){
         if(contactName.length > 0){
             if(validateEmail(contactEmail)){
@@ -75,6 +78,7 @@
         return contactError = 'You must enter a name';
     }
 
+    //### RESETS THE FORM AND CLEARS ALL THE INPUTS ###
     function resetForm(){
         contactName = '';
         contactEmail = '';
@@ -82,6 +86,7 @@
         contactError = '';
     }
 
+    //### MAKES SURE THE EMAIL PROVIDED IS VALID ###
     function validateEmail(email){
         return email.match(
         /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/

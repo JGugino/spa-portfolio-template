@@ -69,7 +69,8 @@ export const aboutSection = {
         aboutText: {
             fontSize: '13pt',
             textAlign: 'center',
-            padding: '0 0 4px 0'
+            padding: '0 0 4px 0',
+            zIndex: '2'
         },
         bottomExtra: {
             position: 'absolute',

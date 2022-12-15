@@ -41,14 +41,14 @@ export const projectsSection = {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            width: '220px',
+            width: '200px',
             height: '160px',
             padding: '2rem',
             gap: '0.2rem',
             zIndex: '2'
         },
         projectItemIcon: {
-            width: '240px',
+            width: '220px',
             height: '120px',
             padding: '0.6rem',
             borderRadius: '10px',

@@ -8,11 +8,14 @@
         applySkillsStyles(skillsStyles, currentSkills);
     });
     
+    //### APPLY SPECIFIED STYLES TO PROPER SECTION ELEMENTS
     function applySkillsStyles(styles, skills){
+        //### FIND SECTION ELEMENTS ###
         const skillsSection = document.querySelector('.skills-section');
         const currentSkillsContainer = document.querySelector('.current-skills');
         const bottomExtra = document.querySelector('.bottom-extra-skills');
 
+        //### MAKE SURE STYLES EXIST AND APPLY TO CORRECT ELEMENT ###
         if(styles.skillsContainer) Object.assign(skillsSection.style, styles.skillsContainer);
         else console.error('No skillsContainer styles found');
 
@@ -22,12 +25,15 @@
         if(styles.bottomExtra) Object.assign(bottomExtra.style, styles.bottomExtra);
         else console.error('No bottomExtra styles found');
 
+        //### APPLY STYLES TO EACH SKILL ITEM IN SECTION
         skills.forEach(skill => {
+            //### FIND SKILL ITEM ELEMENTS
             const skillName = formatSkillName(skill.name);
             const skillItemContainer = document.querySelector(`.skill-${skillName}`);
             const skillItemIcon = document.querySelector(`.skill-icon-${skillName}`);
             const skillItemText = document.querySelector(`.skill-text-${skillName}`);
             
+            //### MAKE SURE STYLES EXIST AND APPLY TO CORRECT SKILL ITEM ELEMENT ###
             if(styles.skillItemContainer) Object.assign(skillItemContainer.style, styles.skillItemContainer);
             else console.error('No skillItemContainer styles found');
 
@@ -39,6 +45,7 @@
         });
     }
 
+    //### FORMATS SPECIFIED SKILL NAME TO AN EASIER FORMAT WHERE EVERYTHING IS LOWERCASE AND SPACES ARE REPLACED WITH A DASH ###
     function formatSkillName(name){
         const splitName = name.split(' ');
         

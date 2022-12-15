@@ -68,9 +68,11 @@
 
 <footer class="flex flex-col flex-center flex-gap-one">
     <h3 class='footer-text'>&copy; Copyright {copyrightName} {copyrightYear}, All right reserved.</h3>
+    {#if socialLinks.length > 0}
     <nav class="flex flex-gap-one">
         {#each socialLinks as link}
         <a class='social-icon' href="{link.socialLink}"><img src={determineSocialIcon(link.socialIcon)} alt={determineSocialIconAlt(link.socialIcon)}></a>
         {/each}
     </nav>
+    {/if}
 </footer>

@@ -8,12 +8,15 @@
         applyAboutStyles(aboutStyles);
     });
     
+    //### APPLY SPECIFIED STYLES TO PROPER SECTION ELEMENTS
     function applyAboutStyles(styles){
+        //### FIND SECTION ELEMENTS ###
         const aboutSection = document.querySelector('.about-section');
         const aboutTextContainer = document.querySelector('.about-text-container');
         const aboutSectionText = document.querySelector('.about-section-text');
         const bottomExtra = document.querySelector('.bottom-extra-about');
 
+        //### MAKE SURE STYLES EXIST AND APPLY TO CORRECT ELEMENT ###
         if(styles.aboutContainer) Object.assign(aboutSection.style, styles.aboutContainer);
         else console.error('No aboutContainer styles found');
 
